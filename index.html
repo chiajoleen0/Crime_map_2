@@ -49,6 +49,10 @@
             }
           });
         });
+        })
+      .catch(error => {
+        console.error("Error loading CSV:", error);
+      });
       </script>
    </body>
 </html>
