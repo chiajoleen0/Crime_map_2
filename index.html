@@ -37,10 +37,10 @@
           const rows = data.split("\n").slice(1); // skip header row
           rows.forEach(row => {
             const cols = row.split(",");
-            const lat = parseFloat(cols[10]); // Latitude (Column C)
-            const lng = parseFloat(cols[11]); // Longitude (Column D)
-            const address = cols[6];         // Address (Column B)
-            const crime = cols[4] || "Unknown"; // Crime type (Column E)
+            const lat = parseFloat(cols[9]); // Latitude (Column C)
+            const lng = parseFloat(cols[10]); // Longitude (Column D)
+            const address = cols[5];         // Address (Column B)
+            const crime = cols[3] || "Unknown"; // Crime type (Column E)
 
             if (!isNaN(lat) && !isNaN(lng)) {
               L.marker([lat, lng])
